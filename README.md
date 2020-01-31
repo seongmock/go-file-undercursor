@@ -1,7 +1,5 @@
 # go-file-undercursor README
 
-This is the README for your extension "go-file-undercursor".
-
 ## Tested Env
 
 * Ubuntu 18.04
