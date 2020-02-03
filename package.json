@@ -3,7 +3,7 @@
 	"displayName": "go-file-undercursor",
 	"description": "Go to File Under Cursor",
 	"publisher": "Seongmock",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"engines": {
 		"vscode": "^1.41.0"
 	},
