@@ -2,6 +2,7 @@
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
 import * as path from 'path';
+import { fstat, stat } from 'fs';
 
 function getfile_path(line: String, char_pos: Number) {
     // console.log(" line %s, pos %d",line, char_pos);
@@ -61,9 +62,29 @@ export function activate(context: vscode.ExtensionContext) {
             file_path = path.dirname(editor.document.uri.fsPath) + "/" + file_path;
         }
 
-        console.log("File path : %s",file_path);
+        //Strip * at file name
+        if( path.basename(file_path).match(/\*/) ) {
+            file_path = path.dirname(file_path);
+        }
+
         let uri = vscode.Uri.file(file_path);
-        vscode.commands.executeCommand('vscode.open',uri);
+        let options: vscode.OpenDialogOptions = {
+            defaultUri: uri
+        };
+        
+        console.log("File path : %s",file_path);
+        //Check Path Type
+        
+        stat(file_path, function(err, stat) {
+            if (stat.isDirectory()){
+                
+                vscode.window.showOpenDialog(options);
+            }
+            else {
+                vscode.commands.executeCommand('vscode.open',uri);
+            }
+        });
+        
 
 	});
 

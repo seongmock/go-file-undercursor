@@ -1,29 +1,31 @@
-# go-file-undercursor README
+# **go-file-undercursor README**
 
-## Tested Env
+## **Tested Env**
 
-* Ubuntu 18.04
+- Ubuntu 18.04
 
-## Features
+## **Features**
 
-Vscode Extension for Go To File under cursor. Just like VIM 'gf' Function. 
+Vscode Extension for Go To File under cursor. Just like VIM 'gf' Function.
 
 Open file that follow the link under cursor
 
+## **Key Binding**
 
+Default Key bining is
 
-## Key Binding
-Default Key bining is 
+- `Ctrl + K` + `Ctrl + G`
 
-> `Ctrl + K` + `Ctrl + G` 
-
-
-## Known Issues
+## **Known Issues**
 
 No Reported
 
-## Release Notes
+## **Release Notes**
 
-### 1.0.0
+### 1.1.0
+
+Add Folder handling and * handling
+
+### **1.0.0**
 
 Initial release of go-file-undercursor

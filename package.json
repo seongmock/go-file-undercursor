@@ -1,18 +1,18 @@
 {
 	"name": "go-file-undercursor",
 	"displayName": "go-file-undercursor",
-    "description": "Go to File Under Cursor",
-    "publisher" : "Seongmock",
+	"description": "Go to File Under Cursor",
+	"publisher": "Seongmock",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.41.0"
 	},
 	"categories": [
 		"Other"
-    ],
-    "repository": {
-        "url":"https://github.com/seongmock/go-file-undercursor"
-    },
+	],
+	"repository": {
+		"url": "https://github.com/seongmock/go-file-undercursor"
+	},
 	"activationEvents": [
 		"onCommand:extension.go-file-undercursor"
 	],
@@ -23,14 +23,14 @@
 				"command": "extension.go-file-undercursor",
 				"title": "Go File Undercursor(Open File)"
 			}
-        ],
-        "keybindings":[
-            {
-                "command": "extension.go-file-undercursor",
-                "key": "ctrl+k ctrl+g",
-                "when": "editorTextFocus"
-            }
-        ]
+		],
+		"keybindings": [
+			{
+				"command": "extension.go-file-undercursor",
+				"key": "ctrl+k ctrl+g",
+				"when": "editorTextFocus"
+			}
+		]
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
