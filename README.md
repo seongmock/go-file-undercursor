@@ -22,6 +22,10 @@ No Reported
 
 ## **Release Notes**
 
+### 1.2.0
+
+Strip Error Fix
+
 ### 1.1.0
 
 Add Folder handling and * handling
