@@ -21,7 +21,7 @@ function getfile_path(line: String, char_pos: Number) {
 
 function stripfile_path(line: String) {
     let new_line = line.replace(/\'/g,'');
-        new_line = line.replace(/\"/g,'');
+        new_line = new_line.replace(/\"/g,'');
 
     return new_line;
 }
@@ -77,7 +77,6 @@ export function activate(context: vscode.ExtensionContext) {
         
         stat(file_path, function(err, stat) {
             if (stat.isDirectory()){
-                
                 vscode.window.showOpenDialog(options);
             }
             else {
